@@ -1,0 +1,223 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+}
+.navbar{
+    background-color: black;
+}
+.navbar__title {
+    padding-top: 10px;
+    margin: 0px 0 5px;
+    font-size: 32px;
+    color: white;
+}
+
+.navbar__menu {
+    list-style: none;
+    padding: 0;
+    display: inline-flex; 
+    gap: 10px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar__menu li {
+    position: relative;
+    padding: 0 10px;
+}
+
+/* Add vertical bar except for last item */
+.navbar__menu li:not(:last-child)::after {
+    content: "|";
+    position: absolute;
+    right: -10px;
+}
+.receipe-container {
+  text-align: center;
+  font-size: 0; /* remove inline-block spacing */
+}
+
+.card-receipe {
+  display: inline-block;
+  width: 17%;
+  margin: 1%;
+  background-color: #ffffff;
+  padding: 0px;
+  text-align: left;
+  font-size: 16px;
+  vertical-align: top;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border: 1px solid black;
+}
+
+.card-receipe img {
+  width: 100%;
+}
+
+.card__description {
+  margin: 10px 0;
+  color: #4b5563;
+  font-size: 14px;
+  text-align: center;
+}
+
+.card__button {
+  padding: 8px 16px;
+  background-color: #0c0c0c;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.card__button-container {
+  display: flex;
+  justify-content: center;
+}
+
+
+.card__button:hover {
+  background-color: rgb(219, 219, 45);
+}
+
+/* Responsive: stack cards on small screens */
+@media (max-width: 768px) {
+  .card-receipe {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar__menu {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  background-color: black;
+}
+
+.Contact--title{
+    color: #ffffff;
+}
+.contact__name{
+    color: #ffffff;
+}
+
+.contact-container table {
+  border-collapse: collapse;
+}
+
+.contact-container td {
+  padding: 10px 20px;
+  text-align: left;
+}
+
+.contact-container input {
+  padding: 8px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-button {
+  padding: 10px 135px;
+  background-color: rgb(219, 219, 45);
+  color: #010101;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+
+/* MOBILE RESPONSIVE (Up to 768px) */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+.navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .navbar__title {
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+
+  .navbar__menu {
+    display: inline-flex;
+    flex-direction: row; /* Ensure horizontal on mobile */
+    gap: 10px;
+    white-space: nowrap;
+    overflow-x: auto; /* Optional: lets it scroll if it doesn't fit */
+  }
+
+  .navbar__menu li:not(:last-child)::after {
+    content: "|";
+    position: absolute;
+    right: -10px;
+    color: white;
+  }
+
+  .navbar__menu li {
+    padding: 0 10px;
+  }
+
+  .receipe-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0;
+  }
+
+  .card-receipe {
+    width: 90%;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .card__description {
+    font-size: 13px;
+  }
+
+  .card__button {
+    width: 80%;
+  }
+
+  .contact-container {
+    padding: 0 20px;
+  }
+
+  .contact-container input {
+    width: 100%;
+  }
+
+  .submit-button {
+    width: 100%;
+    padding: 10px;
+  }
+}
